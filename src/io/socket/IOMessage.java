@@ -236,8 +236,10 @@ class IOMessage
 		}
 		else
 		{
-			data = fields[FIELD_DATA];
-			args.put(data);
+			if(fields.length == NUM_FIELDS_MESSAGE){
+				data = fields[FIELD_DATA];
+				args.put(data);
+			}
 		}
 	}
 	
